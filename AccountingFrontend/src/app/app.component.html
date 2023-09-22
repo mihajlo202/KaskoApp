@@ -1,0 +1,18 @@
+<div class="celo">
+  <div class="nav-bar">
+    <div class="nav-buttons">
+      <button class="nav-button" (click)="contractsClicked()">
+        Contracts
+      </button>
+      <button class="nav-button" (click)="bankStatementClicked()">
+        Bank Statements
+      </button>
+      <button class="nav-button" (click)="balanceAccount()">
+        Invoices
+      </button>
+    </div>
+  </div>
+  <div class="ruter">
+    <router-outlet></router-outlet>
+  </div>
+</div>
