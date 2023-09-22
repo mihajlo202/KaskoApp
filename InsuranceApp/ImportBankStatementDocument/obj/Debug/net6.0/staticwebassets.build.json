@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "k65JbDXxmpntR87t7rv2rpsVSWBo4bvZl9aP9FzwXiM=",
+  "Source": "ImportBankStatementDocument",
+  "BasePath": "_content/ImportBankStatementDocument",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

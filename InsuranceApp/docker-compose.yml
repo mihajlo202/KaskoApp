@@ -1,0 +1,58 @@
+version: '3.4'
+
+services:
+  contractservice:
+    image: ${DOCKER_REGISTRY-}contractservice
+    build:
+      context: .
+      dockerfile: ContractService/Dockerfile
+    ports:
+    - "5002:80"
+
+  accountingservice:
+    image: ${DOCKER_REGISTRY-}accountingservice
+    build:
+      context: .
+      dockerfile: AccountingService/Dockerfile
+    ports:
+    - "5001:80"
+ 
+  gateway:
+    image: ${DOCKER_REGISTRY-}gateway
+    build:
+      context: .
+      dockerfile: Gateway/Dockerfile
+    ports:
+    - "5050:80"
+
+  importbankstatementdocument:
+    image: ${DOCKER_REGISTRY-}importbankstatementdocument
+    build:
+      context: .
+      dockerfile: ImportBankStatementDocument/Dockerfile
+    ports:
+    - "5003:80"
+
+  processbankstatementservice:
+    image: ${DOCKER_REGISTRY-}processbankstatementservice
+    build:
+      context: .
+      dockerfile: ProcessBankStatementService/Dockerfile
+    ports:
+    - "5004:80"
+
+  cancelitemservice:
+    image: ${DOCKER_REGISTRY-}cancelitemservice
+    build:
+      context: .
+      dockerfile: CancelItemService/Dockerfile
+    ports:
+    - "5005:80"
+    
+  transactionservice:
+    image: ${DOCKER_REGISTRY-}transactionservice
+    build:
+      context: .
+      dockerfile: TransactionService/Dockerfile
+    ports:
+    - "5006:80"

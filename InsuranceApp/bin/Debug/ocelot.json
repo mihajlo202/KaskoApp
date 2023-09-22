@@ -1,0 +1,183 @@
+{
+  "Routes": [
+    //AccountingController
+    {
+      "DownstreamPathTemplate": "/Accounting/GetBankStatements",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountingservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Accounting/GetBankStatements",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "accountingservice"
+    },
+    {
+      "DownstreamPathTemplate": "/Accounting/CreateBankStatement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountingservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Accounting/CreateBankStatement",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "accountingservice"
+    },
+    {
+      "DownstreamPathTemplate": "/Accounting/GetInvoices",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountingservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Accounting/GetInvoices",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "accountingservice"
+    },
+    {
+      "DownstreamPathTemplate": "/Accounting/ApplyBankStatementItem",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountingservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Accounting/ApplyBankStatementItem",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "accountingservice"
+    },
+    //ContractController
+    {
+      "DownstreamPathTemplate": "/Contract/CreateContract",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contractservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Contract/CreateContract",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "contractservice"
+    },
+    {
+      "DownstreamPathTemplate": "/Contract/ActivateContract",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contractservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Contract/ActivateContract",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "contractservice"
+    },
+    {
+      "DownstreamPathTemplate": "/Contract/GetContracts",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contractservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Contract/GetContracts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "contractservice"
+    },
+    {
+      "DownstreamPathTemplate": "/Contract/GetCarCascos",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "contractservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/Contract/GetCarCascos",
+      "UpstreamHttpMethod": [ "Get" ],
+      "SwaggerKey": "contractservice"
+    },
+    //ImportBankStatementController
+    {
+      "DownstreamPathTemplate": "/ImportBankStatement/ImportBankStatement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "importbankstatementdocument",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/ImportBankStatement/ImportBankStatement",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "importbankstatementdocument"
+    },
+    //CancelInvoiceController
+    {
+      "DownstreamPathTemplate": "/CancelInvoice/CancelInvoice",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "cancelitemservice",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/CancelInvoice/CancelInvoice",
+      "UpstreamHttpMethod": [ "Post" ],
+      "SwaggerKey": "cancelitemservice"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "importbankstatementdocument",
+      "Config": [
+        {
+          "Name": "importbankstatementdocument",
+          "Version": "v1",
+          "Url": "http://importbankstatementdocument:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "contractservice",
+      "Config": [
+        {
+          "Name": "contractservice",
+          "Version": "v1",
+          "Url": "http://contractservice:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "accountingservice",
+      "Config": [
+        {
+          "Name": "accountingservice",
+          "Version": "v1",
+          "Url": "http://accountingservice:80/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "cancelitemservice",
+      "Config": [
+        {
+          "Name": "cancelitemservice",
+          "Version": "v1",
+          "Url": "http://cancelitemservice:80/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5050"
+  }
+}

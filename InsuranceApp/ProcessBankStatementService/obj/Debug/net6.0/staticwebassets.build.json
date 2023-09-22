@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PNEhTqOoX2vq/xWtbCoNNVKr2OE0qoiSTbCfPA9k2C0=",
+  "Source": "ProcessBankStatementService",
+  "BasePath": "_content/ProcessBankStatementService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
